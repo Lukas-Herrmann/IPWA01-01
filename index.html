@@ -5,6 +5,15 @@
         <link rel="stylesheet"  
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2/dist/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script>
+            myFunction();
+            </script>
+
+        <script>
+            sortTable(n);
+        </script>
+
     </head>
 
     <body>
@@ -64,78 +73,66 @@
 
         <h2 class="list-group-item mb-0">Unternehmen - die Top 10 Emissionsverursacher</h2>
 
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-
-        <script>
-            function myFunction() {
-              var input, filter, table, tr, td, i, txtValue;
-              input = document.getElementById("myInput");
-              filter = input.value.toUpperCase();
-              table = document.getElementById("myTable");
-              tr = table.getElementsByTagName("tr");
-            
-              for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
-                if (td) {
-                  txtValue = td.textContent || td.innerText;
-                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                  } else {
-                    tr[i].style.display = "none";
-                  }
-                } 
-              }
-            }
-            </script>
-
+        <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Nach Unternehmen suchen..">
 
         <div class="list-group-item mb-0">
             <table class="table" id="myTable">
         <thead>
             <tr>
-                <th>Unternehmen</th>
+                <th onclick="sortTable(0)">Unternehmen</th>
+                <th>Land</th>
                 <th>prozentualer Emissionsanteil weltweit</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>China Coal</td>
-                <td>&percnt; 14.3</td>
-            </tr>
-            <tr>
-                <td>Saudi Aramco</td>
-                <td>&percnt; 4.5</td>
-            </tr>
-            <tr>
                 <td>Gazprom OAO</td>
+                <td>Russland</td>
                 <td>&percnt; 3.9</td>
             </tr>
             <tr>
-                <td>National Iranian Oil CO</td>
-                <td>&percnt; 2.3</td>
+                <td>Saudi Aramco</td>
+                <td>Saudi Arabien</td>
+                <td>&percnt; 4.5</td>
             </tr>
             <tr>
                 <td>ExxonMobil Corp</td>
+                <td>USA</td>
                 <td>&percnt; 2.0</td>
             </tr>
             <tr>
+                <td>National Iranian Oil CO</td>
+                <td>Iran</td>
+                <td>&percnt; 2.3</td>
+            </tr>
+            <tr>
+                <td>China Coal</td>
+                <td>China</td>
+                <td>&percnt; 14.3</td>
+            </tr>
+            <tr>
                 <td>Coal India</td>
+                <td>Indien</td>
                 <td>&percnt; 1.9</td>
             </tr>
             <tr>
                 <td>Petróleos Mexicanos</td>
+                <td>Mexiko</td>
                 <td>&percnt; 1.9</td>
             </tr>
             <tr>
                 <td>Russia Coal</td>
+                <td>Russland</td>
                 <td>&percnt; 1.9</td>
             </tr>
             <tr>
                 <td>Royal Dutch Shell PLC </td>
+                <td>Niederlande</td>
                 <td>&percnt; 1.7</td>
             </tr>
             <tr>
                 <td>China National Petrolium Corp</td>
+                <td>China</td>
                 <td>&percnt; 1.6</td>
             </tr>
         </tbody>
@@ -152,5 +149,6 @@
                 <li class="nav-item"><a class="nav-link" href="imprint.html">Impressum</a></li>
             </ul>
     </footer>
+    <script src="functions.js"></script>
 </body>
 </html>
