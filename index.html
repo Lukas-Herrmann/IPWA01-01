@@ -6,19 +6,14 @@
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2/dist/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <script>
-            myFunction();
-            </script>
-
-        <script>
-            sortTable(n);
-        </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
 
     </head>
 
     <body>
 
-    <header class="d-flex justify-content-end py-3">
+    <header class="d-flex justify-content-end py-3 border-bottom">
             <ul class="nav">
                 <li class="nav-item">
                     <form>
@@ -34,8 +29,7 @@
 
         <nav class="d-flex flex-shrink-0 p-2" style="width: 200px;">
             <ul class="nav mb-auto">
-                <li class="nav-item"><a class="nav-link" href="home.html">Homepage</a></li>
-                <li class="nav-item"><a class="nav-link" href="emissions.html">Emissionsvergleich</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Emissionsvergleich</a></li>
                 <li class="nav-item"><a class="nav-link" href="donations.html">Spenden</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">Über Uns</a></li>
             </ul>
@@ -68,18 +62,15 @@
         </p>
     </section>
 
-
     <section class="list-group bd-example">
 
         <h2 class="list-group-item mb-0">Unternehmen - die Top 10 Emissionsverursacher</h2>
 
-        <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Nach Unternehmen suchen..">
-
         <div class="list-group-item mb-0">
-            <table class="table" id="myTable">
+            <table class="table table-striped" id="tabelle" style="width:100%">
         <thead>
             <tr>
-                <th onclick="sortTable(0)">Unternehmen</th>
+                <th>Unternehmen</th>
                 <th>Land</th>
                 <th>prozentualer Emissionsanteil weltweit</th>
             </tr>
@@ -149,6 +140,11 @@
                 <li class="nav-item"><a class="nav-link" href="imprint.html">Impressum</a></li>
             </ul>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
     <script src="functions.js"></script>
+
 </body>
 </html>
