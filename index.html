@@ -14,11 +14,14 @@
     <body>
 
     <header class="d-flex justify-content-end py-3 border-bottom">
+
             <ul class="nav">
+
                 <li class="nav-item">
-                    <form>
-                        <input type="search" class="form-control" name="suche" placeholder="Suche">
-                    </form>
+                    <div class="input-group">
+                        <input type="search" class="form-control rounded" placeholder="Text eingeben..." aria-label="Search" aria-describedby="search-addon" id="search" />
+                        <button onclick="search()" type="button" class="btn btn-outline-primary">Suche</button>
+                      </div>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="https://www.instagram.com">Instagram</a></li>
                 <li class="nav-item"><a class="nav-link" href="https://www.facebook.com">Facebook</a></li>
@@ -42,6 +45,8 @@
 
         <section class="container pb-5">
 
+            <img src="co2-cloud.png" class="rounded mx-auto d-block" width="80" height="80">
+
             <h1 class="text-center">EMISSIONEX - IHR EMISSIONSEXPERTE</h1>
 
         </section>
@@ -49,7 +54,7 @@
     <section class="list-group">
 
         <h2 class="list-group-item mb-0">Was sind Emissionen?</h2>
-        <p class="list-group-item">
+        <p class="list-group-item" id="paragraph">
             Emission bezeichnet den Ausstoß von Stoffen in die Umwelt, 
             besonders auch in die Atmosphäre. 
             Emissionen können natürlich und lebensnotwendig sein. 
@@ -59,6 +64,7 @@
             In der Natur befinden sich diese Emissionen in einem Gleichgewicht, 
             das von menschlichen Aktivitäten aber gestört wird 
             und den Kreislauf des natürlichen Klimawandels verlässt.
+        </p>
         </p>
     </section>
 
