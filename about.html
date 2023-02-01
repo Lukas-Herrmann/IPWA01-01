@@ -14,9 +14,11 @@
     <header class="d-flex justify-content-end py-3 border-bottom">
             <ul class="nav">
                 <li class="nav-item">
-                    <form>
-                        <input type="search" class="form-control" name="suche" placeholder="Suche">
-                    </form>
+                    <div class="input-group">
+                        <input type="search" class="form-control rounded" placeholder="Text eingeben..." 
+                        aria-label="Search" aria-describedby="search-addon" id="search" />
+                        <button onclick="search()" type="button" class="btn btn-outline-primary">Suche</button>
+                      </div>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="https://www.instagram.com">Instagram</a></li>
                 <li class="nav-item"><a class="nav-link" href="https://www.facebook.com">Facebook</a></li>
@@ -47,7 +49,7 @@
     <section class="list-group">
 
         <h2 class="list-group-item mb-0">Wer wir sind und was wir tun</h2>
-        <p class="list-group-item">
+        <p class="list-group-item" id="paragraph">
             Emissionex dient als Informationsvermittler, um darzustellen, welche Unternehmen, wie viele Emissionen
             produzieren. Die Datenbank entwickelt sich stetig weiter. Gerne können Sie dieses gemeinnützige Projekt
             unterstützen über unseren Spenden Link in der Toolbar - Danke! 
@@ -66,5 +68,6 @@
             </ul>
     </footer>
 
+    <script src="functions.js"></script>
 </body>
 </html>
